@@ -10,6 +10,36 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
     <div class='navbar'>
       <?php echo $_COOKIE['username'];
       //userprofile ?>
+      <form method='POST' enctype="multipart/form-data">
+        <input type='file' name='myupload'/>
+        <input type='submit' name='upload' value='upload'/>
+      </form>
+      <?php
+        $target='profile/'.basename($_FILES['myupload']['name']);
+        if(isset($_POST['upload'])){
+          $con=mysqli_connect('localhost','root','root','OpenS');
+          if ($con){
+            $image=$_FILES['myupload']['name'];
+            $sql="INSERT INTO test(profile) VALUES('$image')";
+            mysqli_query($con,$sql);
+            if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
+              echo "Success";
+            }else{
+              echo "Error";
+            }
+          }else{
+            echo "Error";
+          }
+        }
+      ?>
+      <?php
+        $con=mysqli_connect('localhost','root','root','OpenS');
+        $sql="SELECT * from test";
+        $r=mysqli_query($con,$sql);
+        while ($row=mysqli_fetch_array($r)) {
+          echo "<image src='profile/".$row[0]."' height='20px' width='20px'/>";
+        }
+      ?>
     </div>
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
@@ -43,7 +73,7 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
           $r=mysqli_query($con,$sql1);
           echo "<ul type='disk'>";
           while($w=mysqli_fetch_array($r)){
-            echo "<li>".$w[0]."</li>";//display the number of messages
+            echo "<li>".$w[0]."</li>";//
           }echo "</ul>";
         }
         //   //
@@ -51,6 +81,7 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
       ?>
     </div>
     <div class='chatpage'>
+      //dispaly the hobbies that have a notification//
     </div>
   </body>
   <!--neeed to set up time!-->
