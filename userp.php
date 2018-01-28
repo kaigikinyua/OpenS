@@ -22,21 +22,22 @@
       <hr></hr>
       <div class='P.Associates'>
         <?php
-          /*$con=mysqli_connect("localhost","tester","tester","OpenS");
+          $con=mysqli_connect("localhost","tester","tester","OpenS");
           $email=$_SESSION['email'];
           $sql="SELECT username,email from OpenSUsers where email!='$email'";
           $r=mysqli_query($con,$sql);
           #$array[];
+          echo "<form method='GET'action='Userp.php' >";
           while ($f=mysqli_fetch_array($r))
           {
-            $array['username']=$f['username'];
-            $array['email']=$f['email'];
+            $array['username']=$f[0];
+            $array['email']=$f[1];
+            #echo $array['email']." ".$array['username']."<br/>";
+            echo "<table border='0px'>
+            <tr><td>".$array['username']."</td><td><input type='submit' name='add' value='".$array['email']."'/></td></tr>
+            </table>";
           }
 
-          foreach($array as $value){
-            echo $value;
-            #echo "<input type='submit' name='add' value='".$value['email']."'/><br/>";
-          }*/
         ?>
       </div>
       <div class='trending'>
