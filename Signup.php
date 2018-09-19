@@ -1,20 +1,26 @@
 <?php
-if isset($_POST['submit'])
-{
-  $name='antony';
-  $email=$_POST['email'];
-  $pass1=$_POST['pass1'];
-  $pass2=$_POST['pass2'];
-  echo "Your username is";
-}
+    if (isset($_POST['submit'])){
+      $pass1=$_POST['pass1'];
+      $pass2=$_POST['pass2'];
+      if (!empty($pass1) || !empty($pass2))
+      {
+        if ($pass1==$pass2){
+          $name=$_POST['uname'];$email=$_POST['email'];
+          $con=mysqli_connect('localhost','tester','tester','OpenS');
+          if ($con){
+            echo $name.'<br/>'.$email.'<br/>'.$pass1;
+            $sql="INSERT INTO OpenSUsers(username,email,password) VALUES('$name','$email','$pass1');";
+            $r=mysqli_query($con,$sql);
+            if (!$r){
+              echo 'Error while saving data';
+              mysqli_error($r);
+            }
+          }else{
+            mysqli_error();
+          }
+        }
+      }else{
+        echo 'both password fields are needed';
+      }
+    }
 ?>
-<html>
-<head>
-  <title></title>
-  <body>
-    <?php
-    echo 'Hello';
-    ?>
-  </body>
-</head>
-</html>
