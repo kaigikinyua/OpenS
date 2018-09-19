@@ -1,4 +1,6 @@
 <?php
+  //security
+  //check if useremail is already in use
     if (isset($_POST['submit'])){
       $pass1=$_POST['pass1'];
       $pass2=$_POST['pass2'];
@@ -11,16 +13,11 @@
             echo $name.'<br/>'.$email.'<br/>'.$pass1;
             $sql="INSERT INTO OpenSUsers(username,email,password) VALUES('$name','$email','$pass1');";
             $r=mysqli_query($con,$sql);
-            if (!$r){
-              echo 'Error while saving data';
-              mysqli_error($r);
+            if ($r){
+              header('Location:login.html');
             }
-          }else{
-            mysqli_error();
-          }
+          }else{mysqli_error();}
         }
-      }else{
-        echo 'both password fields are needed';
-      }
+      }else{echo 'both password fields are needed';}
     }
 ?>
