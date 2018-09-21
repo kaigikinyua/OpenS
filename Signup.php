@@ -18,6 +18,9 @@
             }
           }else{mysqli_error();}
         }
-      }else{echo 'both password fields are needed';}
+      }else{
+        $message="password field required";
+        $url="signup.php";
+        header("Location:signup.php?$message=$message");}
     }
 ?>
