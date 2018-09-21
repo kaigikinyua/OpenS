@@ -1,5 +1,6 @@
 <html>
   <head>
+    <?php session_start()?>
     <title>Signup</title>
   </head>
   <body>
@@ -11,6 +12,7 @@
           </tr>
           <tr>
             <td><input type="text" name='email' placeholder="Email"/></td>
+            <?php if(!empty($_SESSION['error_emailexists'])){ echo $_SESSION['error_emailexists'];session_destroy();}?>
           </tr>
           <tr>
             <td><input type="text" name='pass1' placeholder="Password"/></td>
