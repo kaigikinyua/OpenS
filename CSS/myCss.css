@@ -1,0 +1,16 @@
+div.contacts{
+  height:100%;
+  width:24%;
+  padding:10px;
+  background:lightblue;
+  position:absolute;
+  right:5px;
+}
+div.chatpage{
+  height:100%;
+  width:70%;
+  padding:10px;
+  background: pink;
+  position: absolute;
+  left:5px;
+}
