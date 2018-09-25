@@ -28,7 +28,7 @@
           $r=mysqli_query($con,$sql);
           #$array[];
           echo "<form method='GET'action='Userp.php' >";
-          while ($f=mysqli_fetch_array($r))
+          /*while ($f=mysqli_fetch_array($r))
           {
             $array['username']=$f[0];
             $array['email']=$f[1];
@@ -36,7 +36,7 @@
             echo "<table border='0px'>
             <tr><td>".$array['username']."</td><td><input type='submit' name='add' value='".$array['email']."'/></td></tr>
             </table>";
-          }
+          }*/
 
         ?>
       </div>
@@ -45,7 +45,9 @@
       </div>
     </div>
     <div class='chatpage'>
-
+    </div>
+    <div class ="hobbies">
+      <form method="POST"></f
     </div>
   </body>
 </html>
