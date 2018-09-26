@@ -13,36 +13,25 @@
         <?php echo $_SESSION['username']; ?>
       </div>
       <hr></hr>
-
-      <div class='friends'>
-        Associates:<br/>
-        <!--friends names and emails-->
-        Profile : Username :
-      </div>
-      <hr></hr>
-      <div class='P.Associates'>
-        <?php
-          $con=mysqli_connect("localhost","tester","tester","OpenS");
-          $email=$_SESSION['email'];
-          $sql="SELECT username,email from OpenSUsers where email!='$email'";
-          $r=mysqli_query($con,$sql);
-          #$array[];
-          echo "<form method='GET'action='Userp.php' >";
-          /*while ($f=mysqli_fetch_array($r))
-          {
-            $array['username']=$f[0];
-            $array['email']=$f[1];
-            #echo $array['email']." ".$array['username']."<br/>";
-            echo "<table border='0px'>
-            <tr><td>".$array['username']."</td><td><input type='submit' name='add' value='".$array['email']."'/></td></tr>
-            </table>";
-          }*/
-
-        ?>
-      </div>
-      <div class='trending'>
-        Subject:
-      </div>
+      <form method="POST">
+        Create Hobby:<br/>
+        <input type="text" name="Hobby_name" placeholder="Hobby Name"/>
+        <input type="text" name='description' placeholder="Hobby description"/>
+        <input type="submit" name="submit" value="submit"/>
+      </form>
+      <?php
+      if(isset($_POST['submit'])){
+        $con=mysqli_connect("localhost","tester","tester","OpenS");
+        if($con){
+          $hobby=$_POST["Hobby_name"];$desc=$_POST["description"];
+          if (!empty($hobby) && !empty($desc)){
+            $name=$_SESSION['email'];
+            $sql="INSERT INTO HobbyList(hobby_name,description,creator) VALUES('$hobby','$desc','$name')";
+            $r=mysqli_query($con,$sql);
+          }else{echo "<p>One field is empty</p>";}
+        }else{echo mysqli_error($con);}
+      }
+      ?>
     </div>
     <div class='chatpage'>
     </div>
