@@ -28,6 +28,8 @@
             $name=$_SESSION['email'];
             $sql="INSERT INTO HobbyList(hobby_name,description,creator) VALUES('$hobby','$desc','$name')";
             $r=mysqli_query($con,$sql);
+            $sql2="INSERT INTO Hobbiest (hobby_name,email) VALUES('$hobby','$name')";
+            $r2=mysqli_query($con,$sql2);
           }else{echo "<p>One field is empty</p>";}
         }else{echo mysqli_error($con);}
       }
