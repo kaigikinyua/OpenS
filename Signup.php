@@ -40,7 +40,7 @@
   ?>
     <?php
     function check($uemail){
-      $con=mysqli_connect('localhost','tester','tester','OpenS');
+      $con=mysqli_connect('localhost','root','root','OpenS');
       $s="SELECT * FROM OpenSUsers where email='$uemail'";
       $r=mysqli_query($con,$s);
       if(mysqli_num_rows($r)==0){
