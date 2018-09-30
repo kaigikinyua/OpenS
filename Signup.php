@@ -3,7 +3,7 @@
     if (isset($_POST['submit'])){
       $pass1=$_POST['pass1'];
       $pass2=$_POST['pass2'];
-      $con=mysqli_connect('localhost','tester','tester','OpenS');
+      $con=mysqli_connect('localhost','root','root','OpenS');
       $email=$_POST['email'];
       if (check($email)==False){
         if (!empty($pass1) || !empty($pass2))
