@@ -16,6 +16,12 @@
         <tr>
           <td><input type='submit' name="submit" value="Submit"></td>
         </tr>
+          <?php
+            if(!empty($_SESSION['emptyfields'])){
+              echo "<tr><td>".$_SESSION['emptyfields']."</td></tr>";
+              session_destroy();
+            }
+          ?>
       </table>
       <center>
     </form>
