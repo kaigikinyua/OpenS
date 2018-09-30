@@ -1,5 +1,6 @@
 <?php
   //check if useremail is already in use
+  //error in username
     if (isset($_POST['submit'])){
       $pass1=$_POST['pass1'];
       $pass2=$_POST['pass2'];
