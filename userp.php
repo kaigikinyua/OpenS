@@ -13,4 +13,5 @@ else{echo "Hello ".$_COOKIE["username"];}
       echo $_SESSION['username'];?>
     </div>
   </body>
+  <!--neeed to set up time!-->
 </html>
