@@ -8,13 +8,9 @@
           $r=mysqli_query($con,$sql);
           if (mysqli_num_rows($r)==1){
             $output=mysqli_fetch_assoc($r);
-
             $cookie_value=$output['username'];
-            $c_email=$email;
             setcookie("username",$cookie_value);
-            //$_SESSION['username']=$output['username'];
-            //$_SESSION['email']=$email;
-
+            setcookie("email",$email);
             header('Location:userp.php');
           }else{echo "Incorrect credentials";}
         }else{echo "Error conncting to the database";}
