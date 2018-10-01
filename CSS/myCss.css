@@ -1,10 +1,10 @@
-div.contacts{
+div.sidemenu{
   height:100%;
   width:24%;
   padding:10px;
   background:lightblue;
   position:absolute;
-  right:5px;
+  left:5px;
 }
 div.chatpage{
   height:100%;
