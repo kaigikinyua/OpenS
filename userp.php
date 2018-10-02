@@ -18,17 +18,19 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
       $con=mysqli_connect('localhost','root','root','OpenS');
       if($con){
         $email=$_COOKIE['email'];
-        $sql="SELECT hobby from HobbyList where useremail='$email'";
+        $sql="SELECT * from HobbyList where useremail='$email'";
         $r=mysqli_query($con,$sql);
         if(mysqli_num_rows($r)<1){
           echo "Recommended Hobbies</br>";
-          $sql1="SELECT hobbyname from Community";
-          $r1=mysqli_query($con,$sql1);
+          $sql1="SELECT hobbyname from Hobbies";
+          $r1=mysqli_fetch_array($con,$sql1);
           //    //
           if($r1){
             //day10
             //list atleast 5 hobbies where the user can choose
-            echo "Almost Done";
+            for ($i=0;$i<=10;$i++){
+              echo $r1[hobbyname];
+            }
             //have a next button for the next bunch
           }
         }else{
