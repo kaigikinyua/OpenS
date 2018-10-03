@@ -10,7 +10,6 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
     <div class='navbar'>
       <?php echo $_COOKIE['username'];
       //userprofile ?>
-
     </div>
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
@@ -21,21 +20,26 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
         $sql="SELECT * from HobbyList where useremail='$email'";
         $r=mysqli_query($con,$sql);
         if(mysqli_num_rows($r)<1){
-          echo "Recommended Hobbies</br>";
-          $sql1="SELECT hobbyname from Hobbies";
-          $r1=mysqli_fetch_array($con,$sql1);
+          echo "Currently you do not have hobbies</br>Here are some interesting ones</br>";
+          $sql1="SELECT * from Hobbies";
+          $r1=mysqli_query($con,$sql1);
           //    //
           if($r1){
             //day10
             //list atleast 5 hobbies where the user can choose
-            for ($i=0;$i<=10;$i++){
-              echo $r1[hobbyname];
-            }
+            echo "<table border='0px'><form method='POST'>";
+            while ($finished=mysqli_fetch_array($r1)){
+              echo "<tr><td>".$finished[0]."</td><td>".$finished[2]." users</td> <td><input type='submit' name='new' value=".$finished[0]."></td></tr>";
+            }echo "</form></table>";
             //have a next button for the next bunch
+            if(isset($_POST['new'])){
+              setcookie('newhobby',$_POST['new']);
+              header('Location:dynamic.php');
+            }
           }
         }else{
           //display users hobbies
-          echo "Hello there";
+          $sql1="SELECT ";
         }
         //   //
       }
