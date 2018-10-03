@@ -2,7 +2,7 @@ div.sidemenu{
   height:100%;
   width:24%;
   padding:10px;
-  background:lightblue;
+  background:green;
   position:absolute;
   left:5px;
 }
@@ -19,5 +19,8 @@ div.navbar{
   height:100px;
   padding=10px;
   top:1px;
-  background:orange;
+  background:red;
+}
+a:hover{
+  color:yellow;
 }
