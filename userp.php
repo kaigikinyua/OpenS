@@ -17,9 +17,9 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
       $con=mysqli_connect('localhost','root','root','OpenS');
       if($con){
         $email=$_COOKIE['email'];
-        $sql="SELECT * from HobbyList where useremail='$email'";
+        $sql="SELECT * from Community where useremail='$email'";
         $r=mysqli_query($con,$sql);
-        if(mysqli_num_rows($r)<1){
+        if(mysqli_num_rows($r)==0){
           echo "Currently you do not have hobbies</br>Here are some interesting ones</br>";
           $sql1="SELECT * from Hobbies";
           $r1=mysqli_query($con,$sql1);
@@ -39,11 +39,18 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
           }
         }else{
           //display users hobbies
-          $sql1="SELECT ";
+          $sql1="SELECT * FROM Community where useremail='$email'";
+          $r=mysqli_query($con,$sql1);
+          echo "<ul type='disk'>";
+          while($w=mysqli_fetch_array($r)){
+            echo "<li>".$w[0]."</li>";//display the number of messages
+          }echo "</ul>";
         }
         //   //
       }
       ?>
+    </div>
+    <div class='chatpage'>
     </div>
   </body>
   <!--neeed to set up time!-->

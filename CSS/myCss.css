@@ -12,7 +12,7 @@ div.chatpage{
   padding:10px;
   background: pink;
   position: absolute;
-  left:5px;
+  right:1%;
 }
 div.navbar{
   width: 100%;
