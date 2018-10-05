@@ -10,28 +10,27 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
     <div class='navbar'>
       <?php echo $_COOKIE['username'];
       //userprofile ?>
+
+      <!--Dropdown Here-->
       <form method='POST' enctype="multipart/form-data">
         <input type='file' name='myupload'/>
         <input type='submit' name='upload' value='upload'/>
-      </form>
-      <?php
-        $target='profile/'.basename($_FILES['myupload']['name']);
-        if(isset($_POST['upload'])){
-          $con=mysqli_connect('localhost','root','root','OpenS');
-          if ($con){
-            $image=$_FILES['myupload']['name'];
-            $sql="INSERT INTO test(profile) VALUES('$image')";
-            mysqli_query($con,$sql);
-            if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
-              echo "Success";
-            }else{
-              echo "Error";
-            }
-          }else{
-            echo "Error";
+        <?php
+          if(isset($_POST['upload'])){
+            $con=mysqli_connect('localhost','root','root','OpenS');
+            $target='profile/'.basename($_FILES['myupload']['name']);
+            if ($con){
+              $image=$_FILES['myupload']['name'];
+              $sql="INSERT INTO OpenS(profile) VALUES('$image')";
+              mysqli_query($con,$sql);
+              if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
+                echo "Success";
+              }else{echo "Error";}
+            }else{echo "Error";}
           }
-        }
-      ?>
+        ?>
+      </form>
+      <!--dropdown end-->
       <?php
         $con=mysqli_connect('localhost','root','root','OpenS');
         $sql="SELECT * from test";
