@@ -6,6 +6,9 @@ div.sidemenu{
   position:absolute;
   left:5px;
 }
+img.profile{
+  border-radius: 50%;
+}
 div.chatpage{
   height:100%;
   width:70%;
