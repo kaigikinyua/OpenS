@@ -10,7 +10,15 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
     <div class='navbar'>
       <?php echo $_COOKIE['username'];
       //userprofile ?>
-
+      <?php
+        $email=$_COOKIE["email"];
+        $con=mysqli_connect('localhost','root','root','OpenS');
+        $sql="SELECT * from OpenSUsers where email='$email'";
+        $r=mysqli_query($con,$sql);
+        while ($row=mysqli_fetch_array($r)) {
+          echo "<image class='profile' src='profile/".$row[3]."' height='50px' width='50px'/>";
+        }
+      ?>
       <!--Dropdown Here-->
       <form method='POST' enctype="multipart/form-data">
         <input type='file' name='myupload'/>
@@ -21,7 +29,8 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
             $target='profile/'.basename($_FILES['myupload']['name']);
             if ($con){
               $image=$_FILES['myupload']['name'];
-              $sql="INSERT INTO OpenS(profile) VALUES('$image')";
+              $email=$_COOKIE["email"];
+              $sql="UPDATE OpenSUsers set profile='$image' WHERE email='$email'";
               mysqli_query($con,$sql);
               if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
                 echo "Success";
@@ -31,14 +40,6 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
         ?>
       </form>
       <!--dropdown end-->
-      <?php
-        $con=mysqli_connect('localhost','root','root','OpenS');
-        $sql="SELECT * from test";
-        $r=mysqli_query($con,$sql);
-        while ($row=mysqli_fetch_array($r)) {
-          echo "<image src='profile/".$row[0]."' height='20px' width='20px'/>";
-        }
-      ?>
     </div>
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
