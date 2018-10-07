@@ -1,3 +1,14 @@
+
+div.intro{
+  position: absolute;
+  right: 1%;
+  background: 000;
+  width:80%;
+  height:100%;
+  font-style: oblique;
+  font-family: serif;
+  color:lightblue;
+}
 div.sidemenu{
   height:100%;
   width:24%;
@@ -5,6 +16,9 @@ div.sidemenu{
   background:green;
   position:absolute;
   left:5px;
+}
+img.icons{
+  border-radius: 50%;
 }
 img.profile{
   border-radius: 50%;
