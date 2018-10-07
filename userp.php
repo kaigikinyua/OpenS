@@ -7,16 +7,17 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
   </head>
   <body>
     <!--navbar!-->
+
+
+
     <div class='navbar'>
-      <?php echo $_COOKIE['username'];
-      //userprofile ?>
       <?php
         $email=$_COOKIE["email"];
         $con=mysqli_connect('localhost','root','root','OpenS');
         $sql="SELECT * from OpenSUsers where email='$email'";
         $r=mysqli_query($con,$sql);
         while ($row=mysqli_fetch_array($r)) {
-          echo "<image class='profile' src='profile/".$row[3]."' height='50px' width='50px'/>";
+          echo "<image class='profile' src='profile/".$row[3]."' height='50px' width='50px'/>".$_COOKIE['username'];
         }
       ?>
       <!--Dropdown Here-->
@@ -26,6 +27,7 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
         <?php
           if(isset($_POST['upload'])){
             $con=mysqli_connect('localhost','root','root','OpenS');
+            //directory to upload the file
             $target='profile/'.basename($_FILES['myupload']['name']);
             if ($con){
               $image=$_FILES['myupload']['name'];
@@ -41,6 +43,11 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
       </form>
       <!--dropdown end-->
     </div>
+    <!--navbarend-->
+
+
+
+
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
       <?php
