@@ -36,6 +36,7 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
               mysqli_query($con,$sql);
               if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
                 echo "Success";
+                header("Location:userp.php");
               }else{echo "Error";}
             }else{echo "Error";}
           }
