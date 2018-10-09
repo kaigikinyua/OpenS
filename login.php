@@ -4,26 +4,26 @@
     <title>Login</title>
   </head>
   <body>
-    <form method="POST" action="Login.php">
-      <center>
-      <table  border='0px'>
-        <tr>
-          <td><input type='text' name="email" placeholder="Email"></td>
-        </tr>
-        <tr>
-          <td><input type='password' name="pass" placeholder="Password"></td>
-        </tr>
-        <tr>
-          <td><input type='submit' name="submit" value="Submit"></td>
-        </tr>
-          <?php
-            if(!empty($_SESSION['emptyfields'])){
-              echo "<tr><td>".$_SESSION['emptyfields']."</td></tr>";
-              session_destroy();
-            }
-          ?>
-      </table>
-      <center>
-    </form>
+    <center>
+      <div class="container">
+        <form method="POST" action="Login.php">
+          <div class="form-group">
+            <label>Email<label><br/>
+              <input type='text' name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label>Password</label><br/>
+              <input type='password' name="pass" placeholder="Password">
+            </div>
+              <input type='submit' name="submit" value="Submit">
+            </center>
+              <?php
+                if(!empty($_SESSION['emptyfields'])){
+                  echo "<tr><td>".$_SESSION['emptyfields']."</td></tr>";
+                  session_destroy();
+                }
+              ?>
+        </form>
+    </div>
   </body>
 </html>
