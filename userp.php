@@ -4,51 +4,56 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
 <html>
   <head>
     <link rel='stylesheet' type='text/css' href='CSS/myCss.css'/>
+    <link rel='stylesheet' href='bootstrap/dist/js/bootstrap.js'/>
+    <link rel='stylesheet' href='bootstrap/dist/css/bootstrap.css'/>
   </head>
   <body>
-    <!--navbar!-->
+     <!--navbar!-->
 
 
 
-    <div class='navbar'>
-      <?php
-        $email=$_COOKIE["email"];
-        $con=mysqli_connect('localhost','root','root','OpenS');
-        $sql="SELECT * from OpenSUsers where email='$email'";
-        $r=mysqli_query($con,$sql);
-        while ($row=mysqli_fetch_array($r)) {
-          echo "<image class='profile' src='profile/".$row[3]."' height='50px' width='50px'/>".$_COOKIE['username'];
-        }
-      ?>
-      <!--Dropdown Here-->
-      <form method='POST' enctype="multipart/form-data">
-        <input type='file' name='myupload'/>
-        <input type='submit' name='upload' value='upload'/>
-        <?php
-          if(isset($_POST['upload'])){
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+      <div class='container-fluid'>
+        <div class='navbar-header'>
+          <?php
+            $email=$_COOKIE["email"];
             $con=mysqli_connect('localhost','root','root','OpenS');
-            //directory to upload the file
-            $target='profile/'.basename($_FILES['myupload']['name']);
-            if ($con){
-              $image=$_FILES['myupload']['name'];
-              $email=$_COOKIE["email"];
-              $sql="UPDATE OpenSUsers set profile='$image' WHERE email='$email'";
-              mysqli_query($con,$sql);
-              if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
-                echo "Success";
-                header("Location:userp.php");
+            $sql="SELECT * from OpenSUsers where email='$email'";
+            $r=mysqli_query($con,$sql);
+            while ($row=mysqli_fetch_array($r)) {
+              echo "<image class='profile' src='profile/".$row[3]."' height='50px' width='50px'/><br/><p style='color:lightblue'>".$_COOKIE['username']."</p>";
+            }
+          ?>
+        </div>
+        <!--Dropdown Here-->
+        <div class='container'>
+        <form method='POST' enctype="multipart/form-data">
+          <input type='file' name='myupload'/>
+          <input type='submit' name='upload' value='upload'/>
+          <?php
+            if(isset($_POST['upload'])){
+              $con=mysqli_connect('localhost','root','root','OpenS');
+              //directory to upload the file
+              $target='profile/'.basename($_FILES['myupload']['name']);
+              if ($con){
+                $image=$_FILES['myupload']['name'];
+                $email=$_COOKIE["email"];
+                $sql="UPDATE OpenSUsers set profile='$image' WHERE email='$email'";
+                mysqli_query($con,$sql);
+                if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
+                  echo "Success";
+                  header("Location:userp.php");
+                }else{echo "Error";}
               }else{echo "Error";}
-            }else{echo "Error";}
-          }
-        ?>
-      </form>
-      <!--dropdown end-->
+            }
+          ?>
+        </form>
+      </div>
+        <!--dropdown end-->
     </div>
+    </nav>
     <!--navbarend-->
-
-
-
-
+    <div class='container' style="height:30%"></div>
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
       <?php
