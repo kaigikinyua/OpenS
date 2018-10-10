@@ -25,35 +25,21 @@ if (!isset($_COOKIE["username"])){header('Location:login.php');}
             }
           ?>
         </div>
-        <!--Dropdown Here-->
-        <div class='container'>
-        <form method='POST' enctype="multipart/form-data">
-          <input type='file' name='myupload'/>
-          <input type='submit' name='upload' value='upload'/>
-          <?php
-            if(isset($_POST['upload'])){
-              $con=mysqli_connect('localhost','root','root','OpenS');
-              //directory to upload the file
-              $target='profile/'.basename($_FILES['myupload']['name']);
-              if ($con){
-                $image=$_FILES['myupload']['name'];
-                $email=$_COOKIE["email"];
-                $sql="UPDATE OpenSUsers set profile='$image' WHERE email='$email'";
-                mysqli_query($con,$sql);
-                if(move_uploaded_file($_FILES['myupload']['tmp_name'], $target)){
-                  echo "Success";
-                  header("Location:userp.php");
-                }else{echo "Error";}
-              }else{echo "Error";}
-            }
-          ?>
-        </form>
+            <div class="container">
+            <ul class="nav nav-pills">
+              <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+              <li class="active"><a href="userp.php"><span class="glyphicon glyphicon-inbox"></span>chatpage</a></li>
+              <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+        <!--tabs-->
+        <!--tabs-->
       </div>
-        <!--dropdown end-->
-    </div>
+
     </nav>
     <!--navbarend-->
-    <div class='container' style="height:30%"></div>
+    <div class='container' style="height:90px"></div>
     <div class="sidemenu">
       <h3><i>Your Hobbies</i></h3>
       <?php
