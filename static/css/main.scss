@@ -1,0 +1,121 @@
+@import './global/global.scss';
+*{
+    padding:0px;
+    margin:0px;
+}
+::-webkit-scrollbar{
+
+}
+::-webkit-scrollbar-thumb{
+
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+button.btn{
+    @include small_btn;
+    border:1px solid black;
+}
+h3.title{
+    @include title;
+}
+
+div.topnav{
+    position: fixed;
+    left:0px;
+    top:0px;
+    width:100vw;
+    z-index: 10;
+    background:rgba(50,50,50,0.9);
+    @include double_eq_col;
+    div.brand{
+        position: relative;
+        padding:10px;
+        text-align: center;
+        h3{
+            position: relative;
+            font-size: 25px;
+            color:$secondary;
+            letter-spacing: 1px;
+        }
+    }
+    div.links{
+        position: relative;
+        padding:10px;
+        text-align: center;
+        button{
+            border:1px solid white;
+            color:white;
+        }
+    }
+    
+}
+div.container{
+    position: relative;
+    min-width:500px;
+    max-width: 700px;
+    @include center_h;
+}
+div.cont_middle{
+    position: relative;
+    max-height: 70%;
+    max-width: 70%;
+    min-width: 500px;
+    @include middle;
+}
+div.card{
+    position: relative;
+    margin: 50px 0px;
+    @include middle;
+    max-width:500px;
+    background:rgba(50,50,50,0.7);
+    padding:5px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    h3.title{
+        color:$secondary;
+    }
+    p{
+        color:white;
+        font-size: 19px;
+        margin-left:20px;
+        line-height: 25px;
+        padding:5px;
+    }
+}
+//sections
+section{
+    width:100vw;
+    height:100vh;
+}
+section.landing{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+section.about{
+
+}
+section.contacts{
+    height: 400px;
+    background:$primary;
+    div.container{
+        padding:20px 0px;
+    }
+    h3.title{
+        color:white;
+    }
+    table{
+        color:white;
+        font-size: 20px;
+        margin-left:30px;
+        letter-spacing: 1px;
+        td{
+            padding:10px 10px;
+
+        }
+    }
+}

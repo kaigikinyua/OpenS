@@ -1,0 +1,57 @@
+//colors
+$primary:rgb(50,50,50);
+$l_primary:#666576;
+//#80D066
+//#64E563
+$secondary:#64E563;
+//layout
+@mixin center_h {
+    left:50%;
+    transform: translateX(-50%);
+}
+@mixin center_v {
+    top:50%;
+    transform: translateY(-50%);
+}
+@mixin middle {
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+//split grid
+@mixin double_eq_col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+//text
+@mixin title {
+    font-size: 25px;
+    width:100%;
+    padding:10px;
+    margin:10px 0px;
+    font-family: Arial;
+}
+
+@mixin normalText {
+    font-size: 18px;
+    font-family: sans-serif;    
+}
+//buttons
+@mixin small_btn {
+    outline: none;
+    padding:5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    background: none;
+    border:none;
+}
+@mixin submit_btn {
+    outline: none;
+    padding:10px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    width:100%;
+}

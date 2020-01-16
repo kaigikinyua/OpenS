@@ -1,0 +1,150 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button.btn {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  background: none;
+  border: none;
+  border: 1px solid black;
+}
+
+h3.title {
+  font-size: 25px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  font-family: Arial;
+}
+
+div.topnav {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  z-index: 10;
+  background: rgba(50, 50, 50, 0.9);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+div.topnav div.brand {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+
+div.topnav div.brand h3 {
+  position: relative;
+  font-size: 25px;
+  color: #64E563;
+  letter-spacing: 1px;
+}
+
+div.topnav div.links {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+
+div.topnav div.links button {
+  border: 1px solid white;
+  color: white;
+}
+
+div.container {
+  position: relative;
+  min-width: 500px;
+  max-width: 700px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.cont_middle {
+  position: relative;
+  max-height: 70%;
+  max-width: 70%;
+  min-width: 500px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+div.card {
+  position: relative;
+  margin: 50px 0px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 500px;
+  background: rgba(50, 50, 50, 0.7);
+  padding: 5px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+div.card h3.title {
+  color: #64E563;
+}
+
+div.card p {
+  color: white;
+  font-size: 19px;
+  margin-left: 20px;
+  line-height: 25px;
+  padding: 5px;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+section.landing {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+section.contacts {
+  height: 400px;
+  background: #323232;
+}
+
+section.contacts div.container {
+  padding: 20px 0px;
+}
+
+section.contacts h3.title {
+  color: white;
+}
+
+section.contacts table {
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+  letter-spacing: 1px;
+}
+
+section.contacts table td {
+  padding: 10px 10px;
+}
+/*# sourceMappingURL=main.css.map */

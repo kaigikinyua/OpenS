@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/bug.png')}}" type="image/x-icon">
+    <title>CodeBug</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/all.min.css')}}">
+</head>
+<body>
+    <div class="topnav">
+        <div class="brand">
+            <h3>CodeBug</h3>
+        </div>
+        <div class="links">
+            <a href="#"><button class="btn">Blogs</button></a>
+            <a href="#"><button class="btn">About</button></a>
+            <a href="#"><button class="btn">Contacts</button></a>
+        </div>
+    </div>
+    <section class="landing" style="background-image:url({{ url_for('static',filename='images/code.jpeg') }});">
+        <div class="cont_middle">
+            <div class="card">
+                <h3 class="title">Hello World</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?</p>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="cont_middle">
+            <h3 class="title">About CodeBug</h3>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati quibusdam nostrum in rem praesentium vel nemo, quae culpa soluta libero maxime blanditiis aperiam nihil consectetur, ducimus quo cum saepe.
+            </p>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container">
+            <h3 class="title">Contacts</h3>
+            <table class="contacts">
+                <tr><td><i class="fab fa-twitter"></i></td><td>@tonnymacoin</td></tr>
+                <tr><td><i class="fab fa-facebook-f"></i></td><td>TonnyMacoin</td></tr>
+                <tr><td><i class="fab fa-instagram"></i></td><td>tonnymacoin</td></tr>
+                <tr><td><i class="fab fa-reddit-alien"></i></td><td>r/o_sider</td></tr>
+                <tr><td><i class="fab fa-github"></i></td><td>kaigikinyua</td></tr>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "Blogs":[
+        {
+            "user":"myemail@gmail.com",
+            "auther":"James May",
+            "date":"12/12/2020",
+            "title":"Electric Vehicles",
+            "blogid":"10",
+            "content":[
+                {"paragraph":"Content"},
+                {"paragraph":"Paragraph two"}
+            ]
+        },
+        {
+            "user":"blunt@gmail.com",
+            "auther":"James Blunt",
+            "date":"12/12/2020",
+            "title":"Electric Vehicles",
+            "blogid":"2",
+            "content":[
+                {"paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+            ]
+        }
+    ]
+}

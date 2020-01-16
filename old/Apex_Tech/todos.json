@@ -1,0 +1,16 @@
+{
+	"title":"Apex technologies - creating software solutions",
+	"todos":[
+		{"todo":"Website/platform for advertisement"}	
+	],
+	"products":[
+	   {"product":"Business analysis tools",
+	     "platform":"web + mobile-latter on"	
+	    },
+		{"product":"Business management - HR,Advertisement,communication[departmental memos,inter-departmental memos etc],documents,assignment,",
+			"platform":"Mobile+web"
+		},
+		{"product":"Business selling platform + Analysis + Management{' adverts','sales','traffic','product'}"},
+		{"product":"Apex_Home_Office - a platform where employees can do their tasks from home"}	
+	],
+}

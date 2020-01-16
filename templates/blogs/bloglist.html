@@ -1,0 +1,28 @@
+{% extends '/blogs/main_layout.html' %}
+
+{% block title %}
+    BlogList
+{% endblock title %}
+
+{% block links %}
+    <a href="/"><button><i class="fa fa-home"></i></button></a>
+{% endblock links %}
+
+{% block content %}
+    <div class="bloglist">
+        <h3 class="title">Available Blogs</h3>
+        <div class="search">
+            <input name="search" placeholder="Search.."/>
+        </div>
+        <!--link{blogsnippet{title,blogsnippet}}-->
+        {% for blog in blogs %}
+            <a href="/blog/{{blog.blogid}}">
+                <div class="blogTile">
+                    <h3 class="title">{{blog.title}}</h3>
+                    <p class="snippet">{{blog.content[0].paragraph}}</p>
+                    <small><i>{{blog.author}} </i> {{blog.date}}</small>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

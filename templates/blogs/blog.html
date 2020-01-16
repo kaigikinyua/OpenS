@@ -1,0 +1,24 @@
+{% extends '/blogs/main_layout.html' %}
+
+{% block titile %}
+    {{blog.title}}
+{% endblock titile %}
+
+{% block links %}
+    <a href="/"><button><i class="fa fa-home"></i></button></a>
+    <a href="/bloglist"><button>Blogs</button></a>
+{% endblock links %}
+
+{% block content %}
+    <div class="blogpage">
+        <div class="details">
+            <h3 class="titile">{{blog.title}}</h3>
+            <small><i>Written by {{blog.auther}}</i> on {{blog.date}}</small>
+        </div>
+        <div class="blogcontent">
+            {% for paragraph in blog.content %}
+                <p>{{paragraph}}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
