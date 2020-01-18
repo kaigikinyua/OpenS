@@ -23,6 +23,13 @@
                 </div>
             </a>
         {% endfor %}
+        <div class="notfound">
+            <h3 class="title">Blog Not found</h3>
+            <i class="fa fa-minus-circle"></i>
+            <div class="message">
+                Sorry we could not find the blog
+            </div>
+        </div>
     </div>
     <script src="{{url_for('static',filename='js/bloglist.js')}}"></script>
 {% endblock content %}

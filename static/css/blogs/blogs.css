@@ -66,4 +66,30 @@ div.bloglist a div.blogTile small {
   font-size: 17px;
   font-family: monospace;
 }
+
+div.notfound {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #323232;
+  text-align: center;
+  display: none;
+}
+
+div.notfound h3.title {
+  color: white;
+  text-align: center;
+  margin: 0px;
+}
+
+div.notfound i {
+  color: #64E563;
+  text-align: center;
+  font-size: 50px;
+  margin: 20px 0px;
+}
+
+div.notfound div.message {
+  color: white;
+}
 /*# sourceMappingURL=blogs.css.map */
