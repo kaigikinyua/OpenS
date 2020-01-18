@@ -9,20 +9,20 @@
 {% endblock links %}
 
 {% block content %}
+    <div class="search">
+        <input name="search" placeholder="Search.." id="search"/>
+    </div>
     <div class="bloglist">
-        <h3 class="title">Available Blogs</h3>
-        <div class="search">
-            <input name="search" placeholder="Search.."/>
-        </div>
         <!--link{blogsnippet{title,blogsnippet}}-->
         {% for blog in blogs %}
             <a href="/blog/{{blog.blogid}}">
                 <div class="blogTile">
                     <h3 class="title">{{blog.title}}</h3>
+                    <small><i class="author">{{blog.auther}} </i> {{blog.date}}</small>
                     <p class="snippet">{{blog.content[0].paragraph}}</p>
-                    <small><i>{{blog.author}} </i> {{blog.date}}</small>
                 </div>
             </a>
         {% endfor %}
     </div>
+    <script src="{{url_for('static',filename='js/bloglist.js')}}"></script>
 {% endblock content %}

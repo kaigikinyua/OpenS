@@ -1,0 +1,69 @@
+body {
+  background: lightgray;
+  overflow: hidden;
+}
+
+div.search {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  margin-top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1000px;
+  max-height: 30px;
+}
+
+div.search input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  min-width: 300px;
+  position: relative;
+  border: 1px solid #323232;
+  outline: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.bloglist {
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1000px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 80%;
+}
+
+div.bloglist a {
+  text-decoration: none;
+  color: #323232;
+}
+
+div.bloglist a div.blogTile {
+  position: relative;
+  min-width: 500px;
+  padding: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 20px 0px;
+  background: white;
+}
+
+div.bloglist a div.blogTile p.snippet {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+div.bloglist a div.blogTile small {
+  margin-left: 30px;
+  font-size: 17px;
+  font-family: monospace;
+}
+/*# sourceMappingURL=blogs.css.map */

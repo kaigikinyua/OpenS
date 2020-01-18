@@ -1,0 +1,53 @@
+@import '../global/global.scss';
+body{
+    background:lightgray;
+    overflow: hidden;
+}
+div.search{
+    position: relative;
+    padding:10px;
+    width:100%;
+    margin-top:40px;
+    @include center_h;
+    max-width: 1000px;
+    max-height: 30px;
+    input{
+        padding:5px 10px;
+        border-radius: 10px;
+        min-width:300px;
+        position: relative;
+        border:1px solid $primary;
+        outline: none;
+        @include center_h;
+    }
+}
+div.bloglist{
+    position: relative;
+    margin-top:10px;
+    @include center_h;
+    max-width: 1000px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    max-height: 80%;
+    a{
+        text-decoration: none;
+        color:$primary;
+        div.blogTile{
+            position: relative;
+            min-width: 500px;
+            padding:10px;
+            @include center_h;
+            margin:20px 0px;
+           background: white;
+            p.snippet{
+                padding:10px;
+                font-size: 16px;
+                margin-left: 30px;
+            }small{
+                margin-left: 30px;
+                font-size: 17px;
+                font-family: monospace;
+            }
+        }
+    }
+}

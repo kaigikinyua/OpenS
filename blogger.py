@@ -15,7 +15,7 @@ def bloglist():
     else:
         return render_template("404.html")
 @app.route('/read')
-def readBlog(blog):
+def readBlog():
     return render_template("blogs/blog.html")
 
 @app.route('/adminlogin')
