@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeBug | Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/all.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/forms/forms.css')}}"/>
+</head>
+<body>
+    <div class="topnav">
+        <div class="brand">{% block title %}{% endblock%}</div>
+        <div class="links">{% block links %}{% endblock %}</div>
+    </div>
+    <section class="content">
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

@@ -14,13 +14,18 @@ def bloglist():
         return render_template("blogs/bloglist.html",blogs=bloglist)
     else:
         return render_template("404.html")
-@app.route('/read')
-def readBlog():
-    return render_template("blogs/blog.html")
+
+@app.route('/blog/<int:id>')
+def readBlog(id):
+    b=Reader()
+    blog=b.get_blog(id)
+    return render_template("blogs/blog.html",blog=blog)
 
 @app.route('/adminlogin')
 def admin():
-    return render_template("Admin/admin_login.html")
+    #get request return template
+    return render_template("Admin/login.html")
+    #post request get data -> authenticate ->login
 
 if __name__=="__main__":
     app.run(debug=True)

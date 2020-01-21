@@ -34,7 +34,7 @@ div.bloglist{
         color:$primary;
         div.blogTile{
             position: relative;
-            min-width: 500px;
+            min-width: 400px;
             padding:10px;
             @include center_h;
             margin:20px 0px;
@@ -71,5 +71,27 @@ div.notfound{
     }
     div.message{
         color:white;
+    }
+}
+p{
+    margin:10px 0px;
+}
+p.header{
+    margin-top:20px;
+    margin-left:10px;
+    font-size: 20px;
+}
+div.blogpage{
+    margin-top:70px;
+    background: white;
+    padding:20px;
+}
+div.brand{
+    small{
+        color:white;
+        i{
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
     }
 }

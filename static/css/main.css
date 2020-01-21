@@ -3,6 +3,17 @@
   margin: 0px;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: #64E563;
+  border-radius: 7px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -68,6 +79,11 @@ div.topnav div.links {
 
 div.topnav div.links button {
   border: 1px solid white;
+  color: white;
+}
+
+div.topnav div.links i {
+  padding: 5px;
   color: white;
 }
 

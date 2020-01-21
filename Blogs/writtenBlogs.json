@@ -7,8 +7,8 @@
             "title":"Electric Vehicles",
             "blogid":"10",
             "content":[
-                {"paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
-                {"paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
             ]
         },
         {
@@ -18,30 +18,41 @@
             "title":"Moon Landing",
             "blogid":"2",
             "content":[
-                {"paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
-                {"paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+            ]
+        },
+        {
+            "user":"blunt@gmail.com",
+            "auther":"Antony Kaigi",
+            "date":"12/12/2020",
+            "title":"Beginners Cringe",
+            "blogid":"1",
+            "content":[
+                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
             ]
         },
         {
             "user":"blunt@gmail.com",
             "auther":"James Blunt",
             "date":"12/12/2020",
-            "title":"Moon Landing",
-            "blogid":"2",
+            "title":"Best programming language",
+            "blogid":"3",
             "content":[
-                {"paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
-                {"paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
             ]
         },
         {
-            "user":"blunt@gmail.com",
-            "auther":"James Blunt",
+            "user":"marvel@email.com",
+            "auther":"Tonny Stark",
             "date":"12/12/2020",
-            "title":"Moon Landing",
-            "blogid":"2",
+            "title":"Parallel Universes",
+            "blogid":"5",
             "content":[
-                {"paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
-                {"paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
             ]
         }
     ]

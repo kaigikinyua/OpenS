@@ -4,10 +4,13 @@
     margin:0px;
 }
 ::-webkit-scrollbar{
-
+    width:5px;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb{
-
+    width:6px;
+    background: $secondary;
+    border-radius: 7px;
 }
 html{
     scroll-behavior: smooth;
@@ -51,6 +54,10 @@ div.topnav{
         text-align: center;
         button{
             border:1px solid white;
+            color:white;
+        }
+        i{
+            padding:5px;
             color:white;
         }
     }

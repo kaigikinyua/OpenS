@@ -1,0 +1,21 @@
+{% extends '/Admin/forms_layout.html' %}
+
+{% block title %}
+    <h3>CodeBug</h3>
+{% endblock title %}
+
+{% block links %}
+    <a href="/"><i class="fa fa-home"></i></a>
+    <a href="/bloglist"><i class="fa fa-list"></i></a>
+{% endblock links %}
+
+{% block content %}
+    <div class="form">
+        <form action='/adminLogin' method="POST">
+            <center><h3 class="title">Admin Login</h3></center>
+            <input class="text" type="text" name="name" placeholder="Name"/>
+            <input class="text" type="password" name="password" placeholder="Password"/>
+            <input class="btn" type="submit" value="Login"/>
+        </form>
+    </div>
+{% endblock content %}

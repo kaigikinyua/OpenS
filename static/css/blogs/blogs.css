@@ -46,7 +46,7 @@ div.bloglist a {
 
 div.bloglist a div.blogTile {
   position: relative;
-  min-width: 500px;
+  min-width: 400px;
   padding: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -91,5 +91,30 @@ div.notfound i {
 
 div.notfound div.message {
   color: white;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+p.header {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+div.blogpage {
+  margin-top: 70px;
+  background: white;
+  padding: 20px;
+}
+
+div.brand small {
+  color: white;
+}
+
+div.brand small i {
+  font-family: monospace;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=blogs.css.map */
