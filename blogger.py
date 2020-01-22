@@ -21,11 +21,27 @@ def readBlog(id):
     blog=b.get_blog(id)
     return render_template("blogs/blog.html",blog=blog)
 
+
+#blogger
+@app.route('/blogger/<int:id>')
+def bloggerPage(id):
+    pass
+    
+@app.route('/postblog')
+def postBlog():
+    pass
+
+
+#admin
 @app.route('/adminlogin')
 def admin():
     #get request return template
     return render_template("Admin/login.html")
     #post request get data -> authenticate ->login
+
+@app.route('/adminpage')
+def adminPage():
+    return render_template("Admin/admin_page.html")
 
 if __name__=="__main__":
     app.run(debug=True)

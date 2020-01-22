@@ -1,24 +1,34 @@
 {
     "Blogs":[
         {
-            "user":"myemail@gmail.com",
-            "auther":"James May",
-            "date":"12/12/2020",
-            "title":"Electric Vehicles",
-            "blogid":"10",
+            "user":"kaigikinyua@gmail.com",
+            "auther":"Antony Kaigi",
+            "date":"12/1/2020",
+            "title":"Choosing a programming language",
+            "blogid":"1",
             "content":[
-                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
-                {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
+                {"header":"What do you want to achieve?","paragraph":"This is one of the major points that I have come to know that is a major determinant in choosing the best programming language. Do you want to create applications for the web,mobile,desktop or even hardware related stuff. If you want to be a FULLSTACK developer this is the question you will ask yourself alot of times since you will be working on projects that are touching different platforms."},
+                {"header":"","paragraph":"It would be almost imposible for any programming language to meet the needs you want and still have the performance, ease of use and easy to develop. Example being using C or C++ for the whole web stack or going for web stack to develop applications for native mobile applications, be sure there will be some drawbacks. The language or framework may have a steep learning curve, it may have a very small community or worst case it will have some significant performance issues on some platforms."},
+                {"header":"","paragraph":"So what do we do when we are faced with such an issue. First do not panic simply look at the languages/frameworks that most people are developing applications in and choose the one that you are on the same rythm then code away!! The only thing you will need is some coffe and some great tunes to listen to while coding and debugging and I almost forgot you will also need a pillow to screem into when you run into those 1,895,323 errors :)"},
+                {"header":"Build something fun","paragraph":"You don't have to build skynet or a rocket launch programme for the language to be useful. You can start with todolist, digital clocks, games or even simple animations to first have fun while playing around with the language. After that you can move on to finance management, fitness trackers, more complete games and add a touch of ML here and there to sound smart ;) ."},
+                {"header":"","paragraph":"Even though the applications may not be the next Facebook they will have surved their purpose of making you solve certain problems and helping you understand some of the internal and crucial inner workings of the language. Not forgetting they will have made your typing game a boost since you wrote a lot of sphaghetti beginner code."},
+                {"header":"Just Do it","paragraph":"This is something that you will have to get while starting a project and don't have a specific language you want to use in mind. Sometimes you just have to do it in order to learn and have some experience. Even if you will fail or not complete the project you will not be the same as when you were not doing anything about it. I was at the University when we were given a certain project and we had to do it using the Django framework. I had never had the slightest clue that python could be used for the web :-/ I guess now you know how dumb I was"},
+                {"header":"","paragraph":"So not having any experience or knowledge of Python or Django I had to create a Finance Management site. Talk about David and Goliath. I just started with some basics on python and I was hooked. However when learning Django I remember my skull almost caught fire when I was trying to understand how it all worked together to make a website. Models, Views, Urls , Post requests, Get request,csrf tokens, Sessions,Cookies and migrations. All of these things gave me headaches,stomach ulcers and some few STDs :) -{ SynTax Diseases } I don't know what you were thinking of but anyway it was hell."},
+                {"header":"","paragraph":"But now I have never had any regrets of learning Python and Django that way. Even though the system was crap I mean the interface had almost 6 colors :/ so uummh yeah .But all in all I can say most of the projects I have done they would never be possible without having gone through that hell."},
+                {"header":"Learn to stick","paragraph":"Do not learn how to code 'Hello world' in every language. This is the hardest of all. Once you have had an easy time learning a language and you have come to a dead end where you do not understand something or can not solve a certain issue. Learn first how to search the web for answers and even simple solutions to the problem before considering dropping the language and start a new journey with another programming language."},
+                {"header":"","paragraph":"Many beginners do so and they latter find out they know 4 or 7 programming language knowledge yet they cannot deliver a complete system to someone simply because they have learnt chunks of programming languages. I am a victim of such. Funny story, so I was learning Java and it came to a point where I needed a database to store the users values and at the time I did not know how to intergrate database connectors into my code so I tried builing the app with files -{ beginners cringe }. Long story short it never worked and I droped Java and I have never looked at that application ever again. Jumped onto a new progamming language (PHP) encountered some issues and dropped it."},
+                {"header":"","paragraph":"Looking at this you can see I already have learnt 2 programming languages and yet not a single project done to completion using those languages. Those are the results of skipping from one language to another you end up with a long chain of badges that do not have anything of value to you or your work."},
+                {"header":"Get a coffee mug!!","paragraph":"Seriously get a coffee mug because there will be some long nights before you get something useful out of a programming language. But with time you will get what you were looking for, eventually. I am sure you will thank me for this latter. I hope :-| "}
             ]
         },
         {
-            "user":"blunt@gmail.com",
-            "auther":"James Blunt",
+            "user":"kaigikinyua@gmail.com",
+            "auther":"Antony Kaigi",
             "date":"12/12/2020",
-            "title":"Moon Landing",
+            "title":"Beginners Cringe",
             "blogid":"2",
             "content":[
-                {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
+                {"header":"Built a database manager","paragraph":"Can't believe I tried building a database manager."},
                 {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
             ]
         },
@@ -26,8 +36,8 @@
             "user":"blunt@gmail.com",
             "auther":"Antony Kaigi",
             "date":"12/12/2020",
-            "title":"Beginners Cringe",
-            "blogid":"1",
+            "title":"Money Aspect",
+            "blogid":"3",
             "content":[
                 {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
                 {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}
@@ -37,8 +47,8 @@
             "user":"blunt@gmail.com",
             "auther":"James Blunt",
             "date":"12/12/2020",
-            "title":"Best programming language",
-            "blogid":"3",
+            "title":"Freelance or Job",
+            "blogid":"4",
             "content":[
                 {"header":"Header one","paragraph":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo modi harum delectus, asperiores in facilis deleniti quaerat perspiciatis "},
                 {"header":"Header one","paragraph":"labore voluptate accusantium doloribus. Veritatis, dignissimos. Praesentium sunt nobis ab impedit?"}

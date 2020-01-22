@@ -1,0 +1,18 @@
+section.about h3.title {
+  color: #64E563;
+}
+
+section.about p {
+  font-size: 18px;
+}
+
+section.about img.icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=index.css.map */
